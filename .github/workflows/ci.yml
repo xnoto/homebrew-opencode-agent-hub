@@ -8,7 +8,7 @@ on:
 
 jobs:
   audit:
-    name: auditExpected
+    name: Homebrew Audit
     runs-on: macos-latest
     steps:
       - name: Checkout
