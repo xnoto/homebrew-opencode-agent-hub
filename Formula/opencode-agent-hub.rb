@@ -19,7 +19,7 @@ class OpencodeAgentHub < Formula
     sha256 "b650d30f370c2b724812bee08008be0c4163b163ddaec3f2546c1caf65f191db"
   end
 
-  resource "charset-normalizer" do
+  resource "charset" do
     url "https://files.pythonhosted.org/packages/source/c/charset-normalizer/charset_normalizer-3.4.0.tar.gz"
     sha256 "223217c3d4f82c3ac5e29032b3f1c2eb0fb591b72161f86d93f5719079dae93e"
   end
