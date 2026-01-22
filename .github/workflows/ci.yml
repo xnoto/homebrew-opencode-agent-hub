@@ -14,9 +14,14 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Tap local formula
+        run: |
+          mkdir -p $(brew --repository)/Library/Taps/xnoto
+          ln -s $GITHUB_WORKSPACE $(brew --repository)/Library/Taps/xnoto/homebrew-opencode-agent-hub
+
       - name: Audit formula
         run: |
-          brew audit --strict Formula/opencode-agent-hub.rb
+          brew audit --strict opencode-agent-hub
 
   # Note: Install test is commented out until first PyPI release
   # Uncomment after v0.1.0 is published
@@ -28,9 +33,14 @@ jobs:
   #     - name: Checkout
   #       uses: actions/checkout@v4
   #
+  #     - name: Tap local formula
+  #       run: |
+  #         mkdir -p $(brew --repository)/Library/Taps/xnoto
+  #         ln -s $GITHUB_WORKSPACE $(brew --repository)/Library/Taps/xnoto/homebrew-opencode-agent-hub
+  #
   #     - name: Install formula
   #       run: |
-  #         brew install --build-from-source Formula/opencode-agent-hub.rb
+  #         brew install --build-from-source opencode-agent-hub
   #
   #     - name: Verify binaries
   #       run: |
