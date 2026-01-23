@@ -56,3 +56,7 @@ After a new version is published to PyPI:
    ```
 
 4. Commit and push
+
+## License
+
+MIT - See [LICENSE](LICENSE) for details.
