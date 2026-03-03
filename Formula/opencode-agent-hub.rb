@@ -45,6 +45,9 @@ class OpencodeAgentHub < Formula
   def install
     virtualenv_install_with_resources
     pkgshare.install "contrib/launchd/com.xnoto.agent-hub-daemon.plist"
+    # Install coordinator templates for cross-platform discovery
+    (pkgshare/"coordinator").install "contrib/coordinator/opencode.json"
+    (pkgshare/"coordinator").install "contrib/coordinator/AGENTS.md"
   end
 
   def caveats
