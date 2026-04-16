@@ -3,8 +3,8 @@ class OpencodeAgentHub < Formula
 
   desc "Multi-agent coordination daemon and tools for OpenCode"
   homepage "https://github.com/xnoto/opencode-agent-hub"
-  url "https://github.com/xnoto/opencode-agent-hub/archive/refs/tags/v1.4.2.tar.gz"
-  sha256 "bff4ed9d4d588bd2e170995a16c783059ed28ac0343e2ab1bbfb294abf7cd9b7"
+  url "https://github.com/xnoto/opencode-agent-hub/archive/refs/tags/v1.4.3.tar.gz"
+  sha256 "d15517c19d1e5d5bedb4b0f540cc4501efaf265193289665b4937ba134634f8a"
   license "MIT"
 
   depends_on "python@3.11"
