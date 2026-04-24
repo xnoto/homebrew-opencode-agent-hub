@@ -24,16 +24,8 @@
         "Authorization": "Bearer {env:GITHUB_TOKEN}"
       }
     },
-    "opencode-docs": {
-      "type": "local",
-      "command": ["npx", "-y", "opencode-docs-mcp@latest"],
-      "enabled": true
-    },
-    "tmux": {
-      "type": "local",
-      "command": ["npx", "-y", "tmux-mcp"],
-      "enabled": true
-    },
+    "opencode-docs": { "enabled": false },
+    "tmux": { "enabled": false },
     "linear": { "enabled": false },
     "notion": { "enabled": false },
     "aws-api-staging": { "enabled": false },
@@ -47,6 +39,8 @@
     "argocd-prod-eks": { "enabled": false }
   },
   "tools": {
+    "opencode-docs_*": false,
+    "tmux_*": false,
     "linear_*": false,
     "notion_*": false,
     "aws-api-staging_*": false,
