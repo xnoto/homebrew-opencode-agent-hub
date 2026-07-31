@@ -26,8 +26,8 @@ jobs:
         run: |
           brew audit --strict opencode-agent-hub
 
-  # Note: Install test is commented out until first PyPI release
-  # Uncomment after v0.1.0 is published
+  # Install coverage remains disabled; Homebrew Audit is the required check.
+  # Re-enable after source-build installation is made reliable in CI.
   #
   # install:
   #   name: Test Install
@@ -40,6 +40,7 @@ jobs:
   #       run: |
   #         mkdir -p $(brew --repository)/Library/Taps/xnoto
   #         ln -s $GITHUB_WORKSPACE $(brew --repository)/Library/Taps/xnoto/homebrew-opencode-agent-hub
+  #         brew trust xnoto/opencode-agent-hub
   #
   #     - name: Install formula
   #       run: |

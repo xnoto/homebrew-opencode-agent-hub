@@ -38,25 +38,15 @@ brew services stop opencode-agent-hub
 
 ## Updating the Formula
 
-After a new version is published to PyPI:
+Formula updates are owned by the source repository's `.github/workflows/update-homebrew.yml` workflow. After publishing an `opencode-agent-hub` GitHub release:
 
-1. Get the new SHA256:
-   ```bash
-   VERSION=X.Y.Z
-   curl -sL "https://files.pythonhosted.org/packages/source/o/opencode-agent-hub/opencode_agent_hub-${VERSION}.tar.gz" | shasum -a 256
-   ```
+1. Dispatch the `Update Homebrew Tap` workflow in `xnoto/opencode-agent-hub`.
+2. Review its automation-generated pull request in this repository.
+3. Verify the release URL, SHA256, upstream license, dependencies, and formula resources.
+4. Require the Homebrew Audit check to pass before merging.
 
-2. Update `Formula/opencode-agent-hub.rb`:
-   - Update version in URL
-   - Update SHA256
-
-3. Test locally:
-   ```bash
-   brew install --build-from-source ./Formula/opencode-agent-hub.rb
-   ```
-
-4. Commit and push
+Direct formula edits are a recovery path when the automation itself needs repair. Installing or upgrading the formula locally changes the machine and should be done intentionally.
 
 ## License
 
-MIT - See [LICENSE](LICENSE) for details.
+The tap repository is MIT licensed; see [LICENSE](LICENSE). The packaged `opencode-agent-hub` software is AGPL-3.0-only, and the formula records the upstream license.
