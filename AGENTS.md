@@ -30,6 +30,11 @@ ruby -c Formula/opencode-agent-hub.rb
 
 On macOS, `.github/workflows/ci.yml` creates a local tap symlink, trusts that tap, and runs `brew audit --strict`. Those steps modify Homebrew state; inspect the workflow and obtain confirmation before reproducing them locally. Do not audit an installed or stale tap as a substitute for the working checkout.
 
+`brew update-python-resources` also requires the formula to be addressed from
+an installed tap and rejects a standalone checkout path. Prefer the source
+repository's update workflow; only create a temporary local tap after explicit
+approval to modify Homebrew state.
+
 Do not run `brew install`, `brew upgrade`, `brew services`, publish releases, dispatch the source update workflow, or merge formula PRs without explicit confirmation. These actions modify the machine or external distribution state.
 
 ## Contribution workflow
