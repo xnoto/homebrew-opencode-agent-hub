@@ -28,25 +28,3 @@ jobs:
 
   # Install coverage remains disabled; Homebrew Audit is the required check.
   # Re-enable after source-build installation is made reliable in CI.
-  #
-  # install:
-  #   name: Test Install
-  #   runs-on: macos-latest
-  #   steps:
-  #     - name: Checkout
-  #       uses: actions/checkout@v7
-  #
-  #     - name: Tap local formula
-  #       run: |
-  #         mkdir -p $(brew --repository)/Library/Taps/xnoto
-  #         ln -s $GITHUB_WORKSPACE $(brew --repository)/Library/Taps/xnoto/homebrew-opencode-agent-hub
-  #         brew trust xnoto/opencode-agent-hub
-  #
-  #     - name: Install formula
-  #       run: |
-  #         brew install --build-from-source opencode-agent-hub
-  #
-  #     - name: Verify binaries
-  #       run: |
-  #         agent-hub-daemon --help || true
-  #         agent-hub-watch --help || true
