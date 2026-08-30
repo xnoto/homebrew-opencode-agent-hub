@@ -7,6 +7,8 @@ class OpencodeAgentHub < Formula
   sha256 "3391c253880468d65519b374b19965c53331739ece7a15716b263c66336a92ef"
   license "AGPL-3.0-only"
 
+  deprecate! date: "2026-08-30", because: :repo_archived
+
   depends_on "python@3.11"
   depends_on "rust" => :build
 
